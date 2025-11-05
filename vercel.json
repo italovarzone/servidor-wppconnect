@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/docs.json",
+      "destination": "https://your-railway-service.up.railway.app/api/docs.json"
+    }
+  ],
+  "builds": [
+    { "src": "docs/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/docs/index.html" },
+    { "src": "/(.*)", "dest": "/docs/index.html" }
+  ]
+}

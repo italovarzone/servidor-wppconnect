@@ -1,0 +1,27 @@
+{
+  "name": "servidor-wppconnect",
+  "version": "1.0.0",
+  "description": "Servidor Node.js com WPPConnect para gerenciar sessões do WhatsApp Web com API REST e Swagger.",
+  "main": "src/index.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon --legacy-watch src/index.js",
+    "lint": "echo 'No lint configured'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@wppconnect-team/wppconnect": "^1.37.5",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "morgan": "^1.10.1",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
