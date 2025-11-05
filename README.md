@@ -94,9 +94,11 @@ Opção 1: Docker (recomendado)
 
 Opção 2: Nixpacks/Node (sem Docker)
 
+- Garanta que o deploy aponte para a RAIZ do projeto (onde está o `package.json`). Se usar CLI, rode `railway up` na pasta do projeto (não em `src/`).
 - Defina Build Command: `npm ci`
-- Start Command: `node src/index.js`
+- Start Command: `node src/index.js` (ou use o `Procfile` incluso)
 - Crie Volume e aponte `TOKEN_FOLDER` para o caminho montado (ex.: `/data/tokens`).
+- Se o Railpack reclamar "Script start.sh not found" ou não detectar Node, ele pode estar usando o builder Shell por falta do `package.json` no snapshot. Suba a partir da raiz ou use a opção Docker.
 
 ### Vercel (Swagger apontando para Railway)
 
